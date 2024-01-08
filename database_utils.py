@@ -32,6 +32,7 @@ class DatabaseConnector:
     
     def list_db_tables(self):
         """
+        Utility method to list all the tables present in a schema.
         """
         engine = self.init_db_engine()
 
@@ -45,4 +46,6 @@ class DatabaseConnector:
         return tables
 
 if __name__ == '__main__':
-    pass
+    db = DatabaseConnector()
+
+    print(db.list_db_tables())

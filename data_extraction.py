@@ -19,12 +19,4 @@ class DataExtractor:
         df = pd.read_sql_table(table, engine)
 
         return df
-
-
-
-if __name__ == '__main__':
     
-    db = DatabaseConnector()
-
-    extractor = DataExtractor()
-    extractor.read_rds_table(db, 'legacy_users')
